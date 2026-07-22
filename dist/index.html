@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lamp Generator — parametric lamp shade + STL export</title>
+    <script type="module" crossorigin src="/assets/index-P4KuUL0n.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DY9ZML_W.css">
+  </head>
+  <body>
+    <div id="app">
+      <!-- Column 1: shape -->
+      <aside id="col-left" class="sidebar-col">
+        <header id="brand">
+          <h1>Lamp&nbsp;Generator</h1>
+          <p>Parametric shade &rarr; printable STL</p>
+        </header>
+
+        <div class="block">
+          <h2>Presets</h2>
+          <div id="presets"></div>
+        </div>
+
+        <div id="controls"></div>
+      </aside>
+
+      <!-- Column 2: base, printability, supports, actions, export -->
+      <aside id="col-right" class="sidebar-col">
+        <div id="base-controls"></div>
+
+        <div class="block">
+          <h2>Printability</h2>
+          <div id="print-analysis" class="print-analysis"></div>
+          <div id="support-tools">
+            <button id="btn-gen-supports" class="ghost full">⛏ Generate supports</button>
+            <label class="toggle" id="support-toggle-wrap" hidden>
+              <input type="checkbox" id="show-supports" />
+              <span>Show supports in viewport</span>
+            </label>
+            <div id="support-count" class="pa-note"></div>
+          </div>
+        </div>
+
+        <div class="block">
+          <h2>Model</h2>
+          <div id="info"></div>
+        </div>
+
+        <div class="block actions">
+          <button id="btn-random" class="ghost">🎲 Randomize</button>
+          <button id="btn-reset" class="ghost">↺ Reset</button>
+          <button id="btn-light" class="ghost on">Light: On</button>
+        </div>
+
+        <p class="hint">Drag to orbit · scroll to zoom. Print upright; a
+          translucent PLA/PETG at 2–3 walls diffuses light nicely.</p>
+
+        <button id="btn-export" class="primary">⬇ Download STL</button>
+      </aside>
+
+      <main id="viewport"></main>
+    </div>
+
+  </body>
+</html>
